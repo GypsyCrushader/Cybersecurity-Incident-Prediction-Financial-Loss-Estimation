@@ -1,0 +1,2 @@
+- Uses supervised machine learning (Classification) to predict cybersecurity attacks on an organization
+- Used Regression models to estimate the financial loss incurred by the organization due to said attack
