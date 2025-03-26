@@ -1,0 +1,501 @@
+Application Type,Technologies,Vulnerabilities,Attack Type,Security Measure,Breach Severity,Data Lost,Financial Loss(dollar)
+Desktop Application,"Qt, SQLite, C#","Weak OpenSSL configuration, Weak user authentication in embedded DBs, Hardcoded database connection strings",SQL Injection,Use prepared statements and parameterized queries.,High,6450,139113
+Cloud Application,"Google Cloud, Terraform","Insufficient API Key Security, Unvalidated Infrastructure Changes",Data Exposure,Encrypt sensitive data and use proper access control.,High,7854,148965
+Web Application,"CSS, Javascript","CSS injection via style attributes, Insecure local storage usage",API Abuse,Implement rate limiting and secure API keys.,Low,2750,14326
+Desktop Application,C#,Command injection,API Abuse,Implement rate limiting and secure API keys.,Low,863,14154
+Web Application,"HTML, PHP","Hidden Input Fields Manipulation, Insecure file uploads",Code Injection,Avoid using eval() and sanitize user inputs.,Critical,8192,219504
+AI/ML Application,"PyTorch, Hugging Face","Lack of proper model integrity checks, Weak model deployment security",Code Injection,Avoid using eval() and sanitize user inputs.,Medium,5126,66964
+AI/ML Application,Scikit-Learn,No protection against data poisoning attacks,Code Injection,Avoid using eval() and sanitize user inputs.,High,7786,157309
+Mobile Application,Kotlin,Lack of proper background task handling,XSS,Implement content security policy (CSP) and input validation.,Low,2634,16991
+Mobile Application,Flutter,Insecure platform channel communication,Code Injection,Avoid using eval() and sanitize user inputs.,High,7672,133850
+Web Application,"HTML, MySQL","Lack of Content Security Policy (CSP), Storing plaintext passwords",Code Injection,Avoid using eval() and sanitize user inputs.,Critical,8589,211757
+Cloud Application,"AWS Lambda, Google Cloud, Terraform","Unrestricted API Gateway Access, Insufficient API Key Security, Insecure Default Security Group Configurations",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Critical,9367,228444
+Mobile Application,"Java, Flutter","WebView Misconfigurations, Debugging code left in production builds",Code Injection,Avoid using eval() and sanitize user inputs.,Low,735,17307
+Mobile Application,Java,Insecure broadcast receivers,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,6462,143082
+Cloud Application,Google Cloud,Insufficient API Key Security,Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,9949,234992
+Desktop Application,Electron.js,Insecure web preference configurations,API Abuse,Implement rate limiting and secure API keys.,Low,1056,17270
+Mobile Application,React Native,Exposed JavaScript code,SQL Injection,Use prepared statements and parameterized queries.,Low,2281,20331
+Web Application,"MySQL, Javascript, PHP","Over-privileged database users, Insecure local storage usage, Poor Input validation",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Critical,8116,220766
+Mobile Application,React Native,Exposed JavaScript code,XSS,Implement content security policy (CSP) and input validation.,High,6165,130164
+Mobile Application,"React Native, Flutter","Exposed JavaScript code, Unvalidated user input in Flutter forms",Privilege Escalation,Apply the principle of least privilege and audit logs.,High,6177,117721
+AI/ML Application,"OpenAI API, PyTorch, Hugging Face","Unrestricted API Key exposure, Lack of input validation in data pipelines, Lack of model input sanitization",Privilege Escalation,Apply the principle of least privilege and audit logs.,High,7835,130345
+Desktop Application,JavaFX,Hardcoded secrets in source code,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Critical,9006,219941
+Mobile Application,Kotlin,Lack of proper background task handling,XSS,Implement content security policy (CSP) and input validation.,Low,2862,21322
+AI/ML Application,"TensorFlow, Scikit-Learn, OpenAI API","Exposed Debugging APIs, Lack of Robustness testing, API Misconfiguration",Code Injection,Avoid using eval() and sanitize user inputs.,High,6383,115842
+AI/ML Application,"TensorFlow, OpenAI API","Insecure Model Serialization, Unrestricted API Key exposure",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,1998,16417
+Mobile Application,"React Native, Kotlin, Java","Use of untrusted third-party native modules, Insecure data storage, Insecure broadcast receivers",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,9461,228518
+Desktop Application,"Qt, C#","Improper handling of user input, Lack of code obfuscation",API Abuse,Implement rate limiting and secure API keys.,High,7218,137230
+Desktop Application,"C#, SQLite, JavaFX","Hardcoded database connection strings, Weak user authentication in embedded DBs, Weak cryptography implementation",API Abuse,Implement rate limiting and secure API keys.,Medium,5803,64533
+Mobile Application,"React Native, Flutter","Exposed JavaScript code, Lack of obfuscation in Dart code",Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,9963,235041
+Cloud Application,"Kubernetes, MongoDB, Terraform","Running Pods as Root, No Role-Based Access Control (RBAC) Implemented, Insecure Default Security Group Configurations",XSS,Implement content security policy (CSP) and input validation.,Critical,8900,222565
+AI/ML Application,"TensorFlow, Hugging Face","Overly permissive model permissions, Weak model deployment security",API Abuse,Implement rate limiting and secure API keys.,High,7300,130696
+Mobile Application,"Kotlin, Flutter, React Native","Missing network security configuration, Insecure platform channel communication, Lack of proper code obfuscation",Code Injection,Avoid using eval() and sanitize user inputs.,High,6653,120545
+Desktop Application,Electron.js,Weak context isolation,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,9797,228981
+Mobile Application,"Java, React Native, Swift","Unprotected IPC, Lack of proper code obfuscation, Debugging code left in production builds",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,3193,50925
+Cloud Application,Kubernetes,Insecure RBAC Configurations,API Abuse,Implement rate limiting and secure API keys.,Medium,4641,67824
+Cloud Application,"Terraform, MongoDB, Kubernetes","Lack of IAM Role Restrictions, No Role-Based Access Control (RBAC) Implemented, Unrestricted API Server Access",API Abuse,Implement rate limiting and secure API keys.,Critical,8138,208474
+AI/ML Application,Scikit-Learn,No protection against data poisoning attacks,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,1495,6075
+Web Application,"PHP, MySQL","Weak session management, Lack of prepared statements",Data Exposure,Encrypt sensitive data and use proper access control.,High,7086,141305
+Mobile Application,"Flutter, Java, Kotlin","Unvalidated user input in Flutter forms, WebView Misconfigurations, Missing network security configuration",XSS,Implement content security policy (CSP) and input validation.,Critical,9904,242225
+Mobile Application,"Swift, Flutter","Unvalidated User input in Flutter forms, Lack of obfuscation in Dart code",Code Injection,Avoid using eval() and sanitize user inputs.,Medium,4878,50458
+Mobile Application,"Swift, Kotlin","Lack of obfuscation in Dart code, Missing network security configuration",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,3265,54369
+Desktop Application,JavaFX,Hardcoded secrets in source code,Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1195,9143
+AI/ML Application,"Scikit-Learn, TensorFlow","No protection against data poisoning attacks, Overly permissive model permissions",SQL Injection,Use prepared statements and parameterized queries.,High,6773,138604
+Cloud Application,"AWS Lambda, Kubernetes","Insufficient Logging & Monitoring, Insecure RBAC Configurations",API Abuse,Implement rate limiting and secure API keys.,High,6870,139402
+Web Application,"HTML, PHP, MySQL","Lack of Content Security Policy (CSP), Poor Input validation, No rate limiting on database queries",Code Injection,Avoid using eval() and sanitize user inputs.,Low,1882,14788
+Web Application,"PHP, CSS","Hardcoded credentials in source code, Weak CSS based UI restrictions",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Critical,9100,236347
+Web Application,CSS,Clickjacking via Transparent CSS layers,API Abuse,Implement rate limiting and secure API keys.,Medium,3112,52045
+Cloud Application,"Google Cloud, Kubernetes","Misconfigured Cloud Storage Buckets, Weak Pod Security Policies",XSS,Implement content security policy (CSP) and input validation.,Low,1932,23459
+Desktop Application,C#,Lack of code obfuscation,Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,8864,215102
+AI/ML Application,"OpenAI API, PyTorch, TensorFlow","Insecure prompt injection, Exposed Jupyter notebooks running with high privileges, Lack of Input Sanitization",API Abuse,Implement rate limiting and secure API keys.,Medium,4904,64620
+Web Application,"CSS, HTML","Weak CSS based UI restrictions, Missing HTTPOnly Flag",Code Injection,Avoid using eval() and sanitize user inputs.,High,6888,123732
+Desktop Application,"JavaFX, Electron.js, Qt","Hardcoded secrets in source code, Insecure web preference configurations, Improper handling of user input",Data Exposure,Encrypt sensitive data and use proper access control.,Critical,8276,209934
+AI/ML Application,"TensorFlow, OpenAI API, Scikit-Learn","Exposed Debugging APIs, Insecure prompt injection, Lack of Robustness testing",Data Exposure,Encrypt sensitive data and use proper access control.,Medium,4339,41862
+Desktop Application,"C#, SQLite, Qt","Hardcoded database connection strings, No DB encryption by default, Improper handling of user input",Data Exposure,Encrypt sensitive data and use proper access control.,Low,764,6475
+Mobile Application,"Flutter, Swift","Exposed Dart code in APK/IPA, Exposed Dart Code in APK/IPA",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Low,799,10768
+Desktop Application,"Electron.js, C#, Qt","Weak context isolation, Lack of code obfuscation, Insecure signal-slot communication",Privilege Escalation,Apply the principle of least privilege and audit logs.,High,7118,122531
+AI/ML Application,"PyTorch, OpenAI API, Hugging Face","Weak file system access control, Weak rate limiting, Lack of model input sanitization",XSS,Implement content security policy (CSP) and input validation.,Critical,9957,232841
+Web Application,HTML,Unvalidated Input Fields,Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,2584,11943
+Cloud Application,"AWS Lambda, Terraform","Overly Permissive IAM Roles, Lack of IAM Role Restrictions",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,7764,153642
+Mobile Application,React Native,Exposed JavaScript code,SQL Injection,Use prepared statements and parameterized queries.,Low,1566,8144
+Web Application,"PHP, CSS, HTML","Hardcoded credentials in source code, Weak CSS based UI restrictions, Missing Secure Flag",Data Exposure,Encrypt sensitive data and use proper access control.,Low,2058,9577
+Web Application,"PHP, Javascript, MySQL","Weak session management, Insecure DOM manipulation, Lack of prepared statements",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Low,2791,7546
+Cloud Application,"AWS Lambda, Kubernetes, MongoDB","Unprotected environment variables, Unrestricted API Server Access, Weak Default Authentication",XSS,Implement content security policy (CSP) and input validation.,Medium,3547,51970
+Desktop Application,Electron.js,Improper use of remote module,API Abuse,Implement rate limiting and secure API keys.,Critical,8397,214939
+Mobile Application,"Java, React Native","Insecure broadcast receivers, Lack of proper code obfuscation",XSS,Implement content security policy (CSP) and input validation.,Low,1287,5346
+Desktop Application,SQLite,Insecure File-based DB access,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,7778,142372
+Mobile Application,"Swift, Java","Debugging code left in production builds, Unprotected IPC",Code Injection,Avoid using eval() and sanitize user inputs.,Medium,3914,57878
+Cloud Application,"Kubernetes, Google Cloud, MongoDB","Weak Pod Security Policies, Lack of VPC Network Isolation, Lack of Encryption for Data at Rest",Data Exposure,Encrypt sensitive data and use proper access control.,Critical,9881,237717
+Mobile Application,"Java, Swift, React Native","Hardcoded API keys and credentials, Lack of obfuscation in Dart code, Lack of proper code obfuscation",API Abuse,Implement rate limiting and secure API keys.,High,7338,139476
+AI/ML Application,"OpenAI API, Hugging Face, TensorFlow","API Misconfiguration, Unvalidated Model contributions, Exposed Debugging APIs",API Abuse,Implement rate limiting and secure API keys.,Critical,9181,236605
+Mobile Application,"Flutter, Swift, Kotlin","Exposed Dart code in APK/IPA, Debugging code left in production builds, Insecure custom serialization/deserialization",XSS,Implement content security policy (CSP) and input validation.,Critical,8848,223642
+Mobile Application,Java,Insecure broadcast receivers,Code Injection,Avoid using eval() and sanitize user inputs.,Medium,3834,39783
+Cloud Application,"AWS Lambda, Google Cloud, MongoDB","Unprotected environment variables, Weak Identity & Access Management (IAM) Policies, Weak Default Authentication",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,3304,61575
+Cloud Application,"AWS Lambda, Google Cloud","Unrestricted API Gateway Access, Weak Identity & Access Management (IAM) Policies",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Medium,3403,63870
+Mobile Application,"Java, Flutter","WebView Misconfigurations, Debugging code left in production builds",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1193,5520
+Mobile Application,Flutter,Exposed Dart code in APK/IPA,Data Exposure,Encrypt sensitive data and use proper access control.,High,7741,147470
+Mobile Application,"Kotlin, Flutter","Insecure data storage, Lack of obfuscation in Dart code",XSS,Implement content security policy (CSP) and input validation.,Medium,5932,72165
+Mobile Application,"Java, Kotlin","Weak SSL / TLS Certificate validation, Insecure custom serialization/deserialization",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,8745,228752
+Cloud Application,Kubernetes,Exposed Kubernetes Dashboard,Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,9227,221542
+Desktop Application,"C#, Qt, SQLite","Hardcoded database connection strings, Insecure signal-slot communication, Weak user authentication in embedded DBs",SQL Injection,Use prepared statements and parameterized queries.,Critical,9444,240272
+Mobile Application,"Flutter, Kotlin","Debugging code left in production builds, Insecure data storage",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,2372,19527
+AI/ML Application,"Hugging Face, PyTorch, Scikit-Learn","Insecure model hosting, Insecure model loading, Lack of Robustness testing",Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,9418,224989
+Web Application,"MySQL, HTML, Javascript","Lack of prepared statements, Lack of Content Security Policy (CSP), Exposed API keys in frontend code",API Abuse,Implement rate limiting and secure API keys.,Critical,8959,224515
+Web Application,MySQL,Storing plaintext passwords,SQL Injection,Use prepared statements and parameterized queries.,Critical,9747,236674
+Mobile Application,"Flutter, Java, Swift","Lack of obfuscation in Dart code, WebView Misconfigurations, Unvalidated User input in Flutter forms",SQL Injection,Use prepared statements and parameterized queries.,Low,2210,20717
+Mobile Application,Java,WebView Misconfigurations,Data Exposure,Encrypt sensitive data and use proper access control.,Critical,9198,231074
+Web Application,"CSS, PHP, MySQL","Clickjacking via Transparent CSS layers, Use of include and require with untrusted input, No rate limiting on database queries",Code Injection,Avoid using eval() and sanitize user inputs.,Medium,4251,60452
+Web Application,PHP,Use of include and require with untrusted input,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Medium,5330,48316
+Mobile Application,"Swift, React Native, Kotlin","Exposed Dart Code in APK/IPA, Insecure async storage usage, Insecure custom serialization/deserialization",API Abuse,Implement rate limiting and secure API keys.,Critical,8575,224326
+Web Application,"CSS, Javascript, MySQL","Weak CSS based UI restrictions, Insecure DOM manipulation, No rate limiting on database queries",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,5839,78638
+Cloud Application,"AWS Lambda, Kubernetes, MongoDB","Overly Permissive IAM Roles, Unrestricted API Server Access, Weak Default Authentication",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,6248,130665
+AI/ML Application,"Scikit-Learn, Hugging Face","Insecure data preprocessing pipelines, Lack of model input sanitization",XSS,Implement content security policy (CSP) and input validation.,Low,2091,17101
+Desktop Application,"Qt, Electron.js, JavaFX","Weak OpenSSL configuration, Exposed Node.js APIs, Insecure reflection usage",SQL Injection,Use prepared statements and parameterized queries.,Low,1242,18375
+Mobile Application,"Kotlin, Java","Missing network security configuration, Weak SSL / TLS Certificate validation",Code Injection,Avoid using eval() and sanitize user inputs.,High,7089,145236
+Web Application,"Javascript, HTML, PHP","Insecure DOM manipulation, Hidden Input Fields Manipulation, Insecure file uploads",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,2890,12787
+Mobile Application,"Java, Flutter, Kotlin","Insecure broadcast receivers, Unvalidated user input in Flutter forms, Lack of proper background task handling",Code Injection,Avoid using eval() and sanitize user inputs.,Medium,5184,65072
+Mobile Application,React Native,Exposed JavaScript code,Code Injection,Avoid using eval() and sanitize user inputs.,High,6279,121729
+Mobile Application,Java,Insecure broadcast receivers,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,8173,219829
+Web Application,"MySQL, Javascript","No rate limiting on database queries, Exposed API keys in frontend code",API Abuse,Implement rate limiting and secure API keys.,Low,2367,6976
+AI/ML Application,Hugging Face,Lack of model input sanitization,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,9816,245094
+Mobile Application,React Native,Weak SSL pinning implementation,XSS,Implement content security policy (CSP) and input validation.,High,6085,135543
+Cloud Application,"Kubernetes, MongoDB, Terraform","Weak Pod Security Policies, Weak Default Authentication, Hardcoded Secrets in Terraform Code",SQL Injection,Use prepared statements and parameterized queries.,High,7993,153439
+Mobile Application,"Java, Kotlin","Insecure broadcast receivers, Insecure custom serialization/deserialization",API Abuse,Implement rate limiting and secure API keys.,Critical,8123,218417
+Desktop Application,"C#, JavaFX","Weak data binding security, Weak cryptography implementation",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Critical,8924,228033
+Desktop Application,"Qt, SQLite, JavaFX","Weak OpenSSL configuration, Weak user authentication in embedded DBs, Insecure reflection usage",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,3318,57732
+Cloud Application,AWS Lambda,Insufficient Logging & Monitoring,Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,4930,66174
+Desktop Application,"SQLite, JavaFX","Lack of input sanitization, Insecure reflection usage",Code Injection,Avoid using eval() and sanitize user inputs.,Low,1842,5088
+Cloud Application,"AWS Lambda, Google Cloud, Terraform","Unrestricted API Gateway Access, Misconfigured Cloud Storage Buckets, Unvalidated Infrastructure Changes",Data Exposure,Encrypt sensitive data and use proper access control.,High,6538,132731
+Desktop Application,"C#, SQLite","Command injection, No DB encryption by default",SQL Injection,Use prepared statements and parameterized queries.,Low,2996,10671
+Mobile Application,"Kotlin, Flutter","Insecure data storage, Exposed Dart code in APK/IPA",Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,8289,213327
+Web Application,"PHP, MySQL","Poor Input validation, Lack of prepared statements",API Abuse,Implement rate limiting and secure API keys.,Medium,4597,43416
+AI/ML Application,"PyTorch, OpenAI API, TensorFlow","Lack of input validation in data pipelines, API Misconfiguration, Susceptibility to adversarial attacks",Code Injection,Avoid using eval() and sanitize user inputs.,Low,2357,11612
+Web Application,PHP,Use of include and require with untrusted input,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,1414,16947
+Mobile Application,"Flutter, Kotlin","Exposed Dart code in APK/IPA, Missing network security configuration",XSS,Implement content security policy (CSP) and input validation.,Low,806,14038
+AI/ML Application,"OpenAI API, Hugging Face","Unrestricted API Key exposure, Weak model deployment security",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,9839,238293
+Web Application,"MySQL, HTML","Storing plaintext passwords, Unvalidated Input Fields",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,4838,47625
+AI/ML Application,"TensorFlow, OpenAI API","Exposed Debugging APIs, Unrestricted API Key exposure",XSS,Implement content security policy (CSP) and input validation.,Low,1210,11552
+Mobile Application,Flutter,Lack of obfuscation in Dart code,Data Exposure,Encrypt sensitive data and use proper access control.,High,6976,127474
+AI/ML Application,Scikit-Learn,Weak model generalization,Code Injection,Avoid using eval() and sanitize user inputs.,Critical,8184,215864
+Web Application,"HTML, MySQL, Javascript","Lack of Content Security Policy (CSP), Improper indexing, Missing input sanitization on client side",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,2068,12773
+AI/ML Application,"Hugging Face, Scikit-Learn","Weak model deployment security, No protection against data poisoning attacks",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,5618,60102
+Desktop Application,Qt,Insecure signal-slot communication,Code Injection,Avoid using eval() and sanitize user inputs.,Low,1602,11154
+AI/ML Application,Scikit-Learn,Insecure data preprocessing pipelines,Data Exposure,Encrypt sensitive data and use proper access control.,Low,2464,17304
+Mobile Application,Swift,Unvalidated User input in Flutter forms,Data Exposure,Encrypt sensitive data and use proper access control.,Critical,9193,231591
+Web Application,"Javascript, MySQL, PHP","Use of EVAL() function, Storing plaintext passwords, Weak session management",Code Injection,Avoid using eval() and sanitize user inputs.,Low,2904,22927
+Mobile Application,"Flutter, Java, Swift","Exposed Dart code in APK/IPA, Insecure broadcast receivers, Lack of obfuscation in Dart code",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,2307,10323
+AI/ML Application,"TensorFlow, OpenAI API, Scikit-Learn","Insecure Model Serialization, API Misconfiguration, No protection against data poisoning attacks",SQL Injection,Use prepared statements and parameterized queries.,Low,1352,18152
+Desktop Application,"SQLite, Qt","Lack of input sanitization, Insecure signal-slot communication",API Abuse,Implement rate limiting and secure API keys.,Medium,4585,44851
+Web Application,MySQL,Improper indexing,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Critical,8007,205711
+Mobile Application,Java,Hardcoded API keys and credentials,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,6177,113215
+Mobile Application,"Flutter, React Native, Swift","Exposed Dart code in APK/IPA, Exposed JavaScript code, Unvalidated User input in Flutter forms",Code Injection,Avoid using eval() and sanitize user inputs.,Low,921,19760
+Cloud Application,"Google Cloud, Kubernetes, MongoDB","Lack of VPC Network Isolation, Unrestricted API Server Access, Exposed MongoDB Instances",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,6155,114206
+Web Application,PHP,Use of include and require with untrusted input,Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,9419,239269
+AI/ML Application,PyTorch,Lack of input validation in data pipelines,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,4350,61522
+Cloud Application,"Terraform, Google Cloud","Storing Sensitive Credentials in Terraform State Files, Lack of VPC Network Isolation",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,6943,146858
+AI/ML Application,"TensorFlow, PyTorch","Lack of Input Sanitization, Weak file system access control",Code Injection,Avoid using eval() and sanitize user inputs.,Critical,8803,225716
+Web Application,PHP,Poor Input validation,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,5919,74457
+Cloud Application,"AWS Lambda, Terraform","Unrestricted API Gateway Access, Hardcoded Secrets in Terraform Code",API Abuse,Implement rate limiting and secure API keys.,High,6636,123953
+Desktop Application,"Electron.js, C#","Exposed Node.js APIs, Weak data binding security",API Abuse,Implement rate limiting and secure API keys.,Medium,3069,45467
+Cloud Application,"Terraform, Kubernetes","Hardcoded Secrets in Terraform Code, Running Pods as Root",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,7430,149082
+AI/ML Application,"Hugging Face, Scikit-Learn","Unvalidated Model contributions, Lack of model explainability",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,6997,145916
+Desktop Application,"Electron.js, Qt","Unrestricted file system access via IPC, Weak OpenSSL configuration",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,9266,225004
+AI/ML Application,PyTorch,Lack of input validation in data pipelines,SQL Injection,Use prepared statements and parameterized queries.,Medium,4743,53295
+Web Application,"Javascript, HTML, CSS","Insecure DOM manipulation, Lack of Content Security Policy (CSP), Overuse of CSS Attribute Selectors",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,7527,135383
+AI/ML Application,TensorFlow,Lack of Input Sanitization,Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1773,6373
+AI/ML Application,PyTorch,Exposed Jupyter notebooks running with high privileges,Code Injection,Avoid using eval() and sanitize user inputs.,Medium,5060,54468
+AI/ML Application,OpenAI API,Insecure prompt injection,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,7145,128381
+AI/ML Application,"Scikit-Learn, Hugging Face","Weak model generalization, Unvalidated Model contributions",API Abuse,Implement rate limiting and secure API keys.,Critical,8575,224015
+Mobile Application,"Java, Swift","WebView Misconfigurations, Lack of obfuscation in Dart code",Privilege Escalation,Apply the principle of least privilege and audit logs.,High,6735,122024
+Web Application,CSS,CSS injection via style attributes,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,7379,128612
+Cloud Application,"Google Cloud, MongoDB","Insufficient API Key Security, No Role-Based Access Control (RBAC) Implemented",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Medium,5909,77553
+Cloud Application,"Google Cloud, Kubernetes, AWS Lambda","Insufficient API Key Security, Exposed Kubernetes Dashboard, Unrestricted API Gateway Access",XSS,Implement content security policy (CSP) and input validation.,Medium,4893,65752
+AI/ML Application,"PyTorch, TensorFlow, Hugging Face","Weak file system access control, Insecure Model Serialization, Unvalidated Model contributions",Code Injection,Avoid using eval() and sanitize user inputs.,Critical,9287,230379
+Desktop Application,"JavaFX, C#","Weak cryptography implementation, Hardcoded database connection strings",Data Exposure,Encrypt sensitive data and use proper access control.,Critical,8974,222672
+Web Application,HTML,Hidden Input Fields Manipulation,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,8669,221859
+Mobile Application,Java,Unprotected IPC,Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,8026,209786
+AI/ML Application,"Hugging Face, TensorFlow","Weak model deployment security, Exposed Debugging APIs",Data Exposure,Encrypt sensitive data and use proper access control.,Medium,3454,46528
+Desktop Application,C#,Insecure Assembly loading,Code Injection,Avoid using eval() and sanitize user inputs.,Medium,3265,61720
+Cloud Application,"Terraform, AWS Lambda, MongoDB","Lack of IAM Role Restrictions, Unrestricted API Gateway Access, No Role-Based Access Control (RBAC) Implemented",Data Exposure,Encrypt sensitive data and use proper access control.,Medium,4075,45955
+Mobile Application,Java,WebView Misconfigurations,Data Exposure,Encrypt sensitive data and use proper access control.,Critical,9701,238072
+Desktop Application,JavaFX,Hardcoded secrets in source code,Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,2995,12163
+Web Application,"PHP, HTML","Insecure file uploads, Hidden Input Fields Manipulation",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,2433,18029
+Desktop Application,Electron.js,Unrestricted file system access via IPC,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Low,1866,19065
+AI/ML Application,"Scikit-Learn, PyTorch, TensorFlow","Insecure data preprocessing pipelines, Weak file system access control, Lack of Input Sanitization",API Abuse,Implement rate limiting and secure API keys.,Medium,4704,73251
+Web Application,"CSS, Javascript","Insecure External Stylesheets, Missing input sanitization on client side",XSS,Implement content security policy (CSP) and input validation.,Low,1321,9781
+Cloud Application,"AWS Lambda, Google Cloud","Unrestricted API Gateway Access, Misconfigured Cloud Storage Buckets",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Critical,8658,228833
+Web Application,CSS,Overuse of CSS Attribute Selectors,Code Injection,Avoid using eval() and sanitize user inputs.,Critical,8610,222941
+Desktop Application,"Electron.js, C#","Improper use of remote module, Weak data binding security",Data Exposure,Encrypt sensitive data and use proper access control.,Medium,5519,56162
+AI/ML Application,"Hugging Face, OpenAI API, Scikit-Learn","Weak model deployment security, Weak rate limiting, Insecure data preprocessing pipelines",API Abuse,Implement rate limiting and secure API keys.,High,7131,149306
+Mobile Application,Flutter,Exposed Dart code in APK/IPA,XSS,Implement content security policy (CSP) and input validation.,Critical,9173,220253
+Cloud Application,"MongoDB, AWS Lambda","Insecure Query Handling, Unprotected environment variables",XSS,Implement content security policy (CSP) and input validation.,Low,1750,8398
+Mobile Application,"React Native, Kotlin","Weak SSL pinning implementation, Insecure data storage",SQL Injection,Use prepared statements and parameterized queries.,Critical,9322,220915
+Web Application,CSS,Clickjacking via Transparent CSS layers,API Abuse,Implement rate limiting and secure API keys.,Medium,4203,51414
+Mobile Application,"Swift, React Native, Java","Exposed Dart Code in APK/IPA, Use of untrusted third-party native modules, Insecure broadcast receivers",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,9914,246913
+Cloud Application,MongoDB,Lack of Encryption for Data at Rest,Code Injection,Avoid using eval() and sanitize user inputs.,Medium,5453,71341
+Desktop Application,JavaFX,Insecure reflection usage,API Abuse,Implement rate limiting and secure API keys.,Critical,8023,205548
+Mobile Application,Kotlin,Missing network security configuration,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Low,703,20400
+Web Application,"PHP, HTML, CSS","Hardcoded credentials in source code, Unvalidated Input Fields, Weak CSS based UI restrictions",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,2867,16142
+Web Application,"Javascript, MySQL, HTML","Exposed API keys in frontend code, Lack of prepared statements, Missing Secure Flag",Code Injection,Avoid using eval() and sanitize user inputs.,High,7494,141381
+Web Application,"Javascript, PHP","Missing input sanitization on client side, Hardcoded credentials in source code",Data Exposure,Encrypt sensitive data and use proper access control.,Low,2089,14728
+Cloud Application,AWS Lambda,Unprotected environment variables,SQL Injection,Use prepared statements and parameterized queries.,Medium,5767,59678
+AI/ML Application,Hugging Face,Unvalidated Model contributions,XSS,Implement content security policy (CSP) and input validation.,Medium,3980,63982
+AI/ML Application,"Scikit-Learn, OpenAI API, Hugging Face","Weak model generalization, Weak rate limiting, Lack of model input sanitization",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,5172,64985
+Mobile Application,Kotlin,Improper use of Jetpack security library,Code Injection,Avoid using eval() and sanitize user inputs.,High,6809,140137
+Desktop Application,"JavaFX, C#","Weak cryptography implementation, Lack of code obfuscation",API Abuse,Implement rate limiting and secure API keys.,High,7918,136797
+Mobile Application,Swift,Debugging code left in production builds,XSS,Implement content security policy (CSP) and input validation.,Low,1872,21370
+Web Application,"CSS, PHP","CSS injection via style attributes, Hardcoded credentials in source code",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Low,1486,10864
+Mobile Application,"Java, Kotlin","Hardcoded API keys and credentials, Insecure data storage",XSS,Implement content security policy (CSP) and input validation.,Medium,4693,63827
+AI/ML Application,OpenAI API,Insecure prompt injection,Code Injection,Avoid using eval() and sanitize user inputs.,Medium,5536,67325
+AI/ML Application,"Scikit-Learn, OpenAI API","Lack of Robustness testing, Insecure prompt injection",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,7841,143592
+AI/ML Application,"Hugging Face, Scikit-Learn, OpenAI API","API key leaks in Public repositories, Weak model generalization, Unrestricted API Key exposure",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,3077,63791
+AI/ML Application,"OpenAI API, PyTorch","Insecure prompt injection, Lack of input validation in data pipelines",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,6424,123805
+Web Application,"CSS, MySQL, Javascript","Insecure External Stylesheets, Improper indexing, Insecure local storage usage",Data Exposure,Encrypt sensitive data and use proper access control.,High,7306,151233
+Web Application,Javascript,Insecure DOM manipulation,Code Injection,Avoid using eval() and sanitize user inputs.,Low,2240,15262
+AI/ML Application,"TensorFlow, Scikit-Learn","Exposed Debugging APIs, Lack of Robustness testing",API Abuse,Implement rate limiting and secure API keys.,High,6664,145225
+Web Application,"CSS, MySQL","CSS injection via style attributes, Over-privileged database users",XSS,Implement content security policy (CSP) and input validation.,Medium,5702,72217
+Cloud Application,"AWS Lambda, Google Cloud, MongoDB","Overly Permissive IAM Roles, Lack of VPC Network Isolation, No Role-Based Access Control (RBAC) Implemented",XSS,Implement content security policy (CSP) and input validation.,Medium,5379,50525
+Web Application,"HTML, Javascript","Unvalidated Input Fields, Insecure DOM manipulation",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,4629,45920
+Cloud Application,"Google Cloud, MongoDB, Kubernetes","Misconfigured Cloud Storage Buckets, Insecure Query Handling, Unrestricted API Server Access",Data Exposure,Encrypt sensitive data and use proper access control.,Medium,3941,67993
+AI/ML Application,"Hugging Face, Scikit-Learn, PyTorch","Weak model deployment security, Insecure data preprocessing pipelines, Weak file system access control",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Low,2771,13566
+AI/ML Application,"Hugging Face, TensorFlow","API key leaks in Public repositories, Lack of Input Sanitization",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,9340,226770
+Mobile Application,"Java, React Native","WebView Misconfigurations, Lack of proper code obfuscation",Data Exposure,Encrypt sensitive data and use proper access control.,High,7127,136273
+Desktop Application,"SQLite, JavaFX","Insecure File-based DB access, Unrestricted file system access",API Abuse,Implement rate limiting and secure API keys.,Medium,3686,61533
+Mobile Application,"Swift, React Native, Flutter","Insecure platform channel communication, Insecure async storage usage, Unvalidated user input in Flutter forms",SQL Injection,Use prepared statements and parameterized queries.,High,7968,147313
+Desktop Application,Qt,Weak OpenSSL configuration,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,3128,44751
+Mobile Application,Swift,Exposed Dart Code in APK/IPA,Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,3756,65294
+Cloud Application,"Terraform, AWS Lambda, MongoDB","Hardcoded Secrets in Terraform Code, Insufficient Logging & Monitoring, Weak Default Authentication",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,4622,54928
+Web Application,"MySQL, Javascript, CSS","Over-privileged database users, Missing input sanitization on client side, Overuse of CSS Attribute Selectors",XSS,Implement content security policy (CSP) and input validation.,Low,1904,18776
+Desktop Application,"C#, SQLite, JavaFX","Command injection, Weak user authentication in embedded DBs, Weak cryptography implementation",Privilege Escalation,Apply the principle of least privilege and audit logs.,High,6367,141022
+Cloud Application,MongoDB,Exposed MongoDB Instances,Code Injection,Avoid using eval() and sanitize user inputs.,Medium,5301,73257
+Desktop Application,JavaFX,Hardcoded secrets in source code,SQL Injection,Use prepared statements and parameterized queries.,Critical,9983,248129
+Mobile Application,React Native,Use of untrusted third-party native modules,API Abuse,Implement rate limiting and secure API keys.,Low,1924,14635
+AI/ML Application,"PyTorch, Scikit-Learn","Lack of proper model integrity checks, Lack of Robustness testing",Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,8882,225616
+Desktop Application,"Qt, C#, JavaFX","Insecure signal-slot communication, Insecure Assembly loading, Insecure reflection usage",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,4936,57580
+Desktop Application,"C#, Electron.js","Command injection, Unrestricted file system access via IPC",XSS,Implement content security policy (CSP) and input validation.,Critical,9999,235797
+Mobile Application,"Swift, React Native","Lack of obfuscation in Dart code, Use of untrusted third-party native modules",API Abuse,Implement rate limiting and secure API keys.,Critical,9042,218199
+Web Application,"CSS, HTML","Weak CSS based UI restrictions, Insecure Form Actions",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,4547,48440
+AI/ML Application,"Hugging Face, PyTorch, TensorFlow","Weak model deployment security, Weak file system access control, Overly permissive model permissions",XSS,Implement content security policy (CSP) and input validation.,Critical,9940,245687
+AI/ML Application,"Scikit-Learn, Hugging Face","Insecure data preprocessing pipelines, Insecure model hosting",XSS,Implement content security policy (CSP) and input validation.,Critical,9099,222227
+Desktop Application,"SQLite, JavaFX, C#","Weak user authentication in embedded DBs, Insecure reflection usage, Lack of code obfuscation",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Medium,5633,65165
+Cloud Application,Kubernetes,Running Pods as Root,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,8917,230990
+Mobile Application,Java,WebView Misconfigurations,Code Injection,Avoid using eval() and sanitize user inputs.,High,7340,131190
+Cloud Application,AWS Lambda,Unrestricted API Gateway Access,API Abuse,Implement rate limiting and secure API keys.,Medium,5515,73750
+Desktop Application,"Qt, SQLite, Electron.js","Insecure signal-slot communication, Storing sensitive data in Plaintext, Insecure web preference configurations",Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,8893,220032
+Cloud Application,Google Cloud,Weak Identity & Access Management (IAM) Policies,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Low,1139,11289
+Desktop Application,"Qt, C#, JavaFX","Weak OpenSSL configuration, Weak data binding security, Unrestricted file system access",Code Injection,Avoid using eval() and sanitize user inputs.,Critical,9276,232575
+Mobile Application,"Swift, Flutter","Insecure platform channel communication, Exposed Dart code in APK/IPA",Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,9089,234573
+Mobile Application,React Native,Insecure async storage usage,Code Injection,Avoid using eval() and sanitize user inputs.,High,6237,113549
+AI/ML Application,PyTorch,Insecure model loading,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Medium,3246,65625
+Web Application,MySQL,Improper indexing,API Abuse,Implement rate limiting and secure API keys.,High,7331,151639
+Web Application,"CSS, Javascript, PHP","Overuse of CSS Attribute Selectors, Use of EVAL() function, Hardcoded credentials in source code",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Critical,9292,222393
+Desktop Application,"JavaFX, Electron.js","Weak cryptography implementation, Weak context isolation",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,5067,50121
+Web Application,"CSS, PHP, MySQL","Insecure External Stylesheets, Insecure file uploads, Lack of prepared statements",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Low,2865,11204
+Desktop Application,"Electron.js, Qt, SQLite","Improper use of remote module, Weak OpenSSL configuration, Lack of input sanitization",API Abuse,Implement rate limiting and secure API keys.,Critical,9834,232009
+Cloud Application,"AWS Lambda, MongoDB","Unprotected environment variables, No Role-Based Access Control (RBAC) Implemented",Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,8624,216087
+Cloud Application,Kubernetes,Running Pods as Root,API Abuse,Implement rate limiting and secure API keys.,Medium,3096,42797
+AI/ML Application,Hugging Face,Weak model deployment security,API Abuse,Implement rate limiting and secure API keys.,Critical,9836,227992
+Web Application,"Javascript, CSS, PHP","Insecure DOM manipulation, Weak CSS based UI restrictions, Weak session management",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,7520,128718
+Mobile Application,"Kotlin, Swift, Flutter","Lack of proper background task handling, Insecure platform channel communication, Lack of obfuscation in Dart code",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,4785,55902
+Cloud Application,Kubernetes,Running Pods as Root,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Medium,5002,62758
+Cloud Application,MongoDB,No Role-Based Access Control (RBAC) Implemented,Data Exposure,Encrypt sensitive data and use proper access control.,High,7193,128875
+AI/ML Application,"TensorFlow, OpenAI API","Susceptibility to adversarial attacks, Unrestricted API Key exposure",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,3902,66183
+AI/ML Application,"OpenAI API, PyTorch","Unrestricted API Key exposure, Exposed Jupyter notebooks running with high privileges",SQL Injection,Use prepared statements and parameterized queries.,Low,2049,19144
+Cloud Application,Google Cloud,Insufficient API Key Security,XSS,Implement content security policy (CSP) and input validation.,High,6453,131741
+Desktop Application,"JavaFX, C#, SQLite","Weak cryptography implementation, Hardcoded database connection strings, Lack of input sanitization",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,4915,59275
+Web Application,CSS,Clickjacking via Transparent CSS layers,XSS,Implement content security policy (CSP) and input validation.,Low,2913,12977
+Desktop Application,"C#, SQLite","Lack of code obfuscation, Lack of input sanitization",API Abuse,Implement rate limiting and secure API keys.,Critical,9398,232959
+Mobile Application,Swift,Exposed Dart Code in APK/IPA,Data Exposure,Encrypt sensitive data and use proper access control.,High,6938,123142
+Desktop Application,"SQLite, JavaFX","Weak user authentication in embedded DBs, Unrestricted file system access",API Abuse,Implement rate limiting and secure API keys.,Low,788,10106
+Mobile Application,"Java, Kotlin, Swift","Hardcoded API keys and credentials, Insecure data storage, Insecure platform channel communication",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1371,11969
+Mobile Application,"Kotlin, Flutter, Swift","Improper use of Jetpack security library, Lack of obfuscation in Dart code, Exposed Dart Code in APK/IPA",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,7794,155834
+AI/ML Application,"PyTorch, OpenAI API","Lack of proper model integrity checks, Lack of output filtering",XSS,Implement content security policy (CSP) and input validation.,Critical,9478,232177
+Desktop Application,"Qt, C#, Electron.js","Improper handling of user input, Weak data binding security, Unrestricted file system access via IPC",Data Exposure,Encrypt sensitive data and use proper access control.,Critical,9209,223968
+Desktop Application,Qt,Insecure signal-slot communication,Privilege Escalation,Apply the principle of least privilege and audit logs.,High,7045,149853
+Desktop Application,SQLite,Lack of input sanitization,SQL Injection,Use prepared statements and parameterized queries.,High,6314,128834
+Cloud Application,Google Cloud,Weak Identity & Access Management (IAM) Policies,Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,2460,13851
+AI/ML Application,"Hugging Face, PyTorch, OpenAI API","Unvalidated Model contributions, Exposed Jupyter notebooks running with high privileges, API Misconfiguration",Privilege Escalation,Apply the principle of least privilege and audit logs.,High,6202,135029
+Desktop Application,JavaFX,Hardcoded secrets in source code,Data Exposure,Encrypt sensitive data and use proper access control.,High,6029,118982
+Mobile Application,"Flutter, Swift","Insecure platform channel communication, Unvalidated User input in Flutter forms",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,6899,132284
+Web Application,"PHP, MySQL","Hardcoded credentials in source code, Improper indexing",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Medium,5266,70983
+Web Application,"CSS, Javascript, PHP","CSS injection via style attributes, Use of EVAL() function, Use of include and require with untrusted input",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,5993,63242
+Cloud Application,MongoDB,No Role-Based Access Control (RBAC) Implemented,Data Exposure,Encrypt sensitive data and use proper access control.,High,6563,142884
+Desktop Application,"SQLite, Electron.js, Qt","Lack of input sanitization, Exposed Node.js APIs, Improper handling of user input",SQL Injection,Use prepared statements and parameterized queries.,Critical,8956,227919
+Mobile Application,"Swift, Flutter","Lack of obfuscation in Dart code, Insecure platform channel communication",Data Exposure,Encrypt sensitive data and use proper access control.,Low,652,6188
+Web Application,CSS,Overuse of CSS Attribute Selectors,Data Exposure,Encrypt sensitive data and use proper access control.,Medium,5571,77738
+AI/ML Application,"OpenAI API, PyTorch","Weak rate limiting, Lack of input validation in data pipelines",Code Injection,Avoid using eval() and sanitize user inputs.,Medium,3221,58368
+Mobile Application,Flutter,Insecure platform channel communication,SQL Injection,Use prepared statements and parameterized queries.,Critical,9314,234223
+Web Application,"Javascript, HTML, PHP","Insecure local storage usage, Missing Secure Flag, Poor Input validation",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,540,8018
+AI/ML Application,"Scikit-Learn, Hugging Face, TensorFlow","Lack of Robustness testing, Weak model deployment security, Lack of Input Sanitization",Code Injection,Avoid using eval() and sanitize user inputs.,Low,1091,17733
+Cloud Application,"AWS Lambda, Google Cloud","Insufficient Logging & Monitoring, Weak Identity & Access Management (IAM) Policies",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Critical,8345,217700
+Mobile Application,"Kotlin, React Native, Swift","Insecure data storage, Weak SSL pinning implementation, Lack of obfuscation in Dart code",Code Injection,Avoid using eval() and sanitize user inputs.,High,6523,132771
+Desktop Application,Electron.js,Weak context isolation,SQL Injection,Use prepared statements and parameterized queries.,Medium,4646,49816
+AI/ML Application,"OpenAI API, PyTorch, Scikit-Learn","API Misconfiguration, Exposed Jupyter notebooks running with high privileges, Lack of model explainability",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,8755,213008
+Web Application,"Javascript, CSS","Missing input sanitization on client side, Overuse of CSS Attribute Selectors",XSS,Implement content security policy (CSP) and input validation.,Critical,8988,229755
+Mobile Application,Swift,Debugging code left in production builds,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,2179,11107
+Web Application,"HTML, PHP","Unvalidated Input Fields, Insecure file uploads",SQL Injection,Use prepared statements and parameterized queries.,Medium,4364,53097
+Desktop Application,"Electron.js, JavaFX","Exposed Node.js APIs, Unrestricted file system access",Code Injection,Avoid using eval() and sanitize user inputs.,Medium,4909,57788
+Mobile Application,"Flutter, Swift","Lack of obfuscation in Dart code, Insecure platform channel communication",API Abuse,Implement rate limiting and secure API keys.,High,6922,132451
+Web Application,"CSS, PHP, MySQL","Clickjacking via Transparent CSS layers, Hardcoded credentials in source code, Storing plaintext passwords",API Abuse,Implement rate limiting and secure API keys.,Low,1616,7046
+Web Application,"Javascript, MySQL","Missing input sanitization on client side, Improper indexing",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,1483,22817
+Web Application,"PHP, CSS, HTML","Use of include and require with untrusted input, Weak CSS based UI restrictions, Lack of Content Security Policy (CSP)",Data Exposure,Encrypt sensitive data and use proper access control.,Low,502,19873
+Cloud Application,"AWS Lambda, MongoDB, Kubernetes","Insufficient Logging & Monitoring, No Role-Based Access Control (RBAC) Implemented, Insecure RBAC Configurations",Data Exposure,Encrypt sensitive data and use proper access control.,Low,2004,10947
+Cloud Application,"MongoDB, Terraform","No Role-Based Access Control (RBAC) Implemented, Insecure Default Security Group Configurations",SQL Injection,Use prepared statements and parameterized queries.,Low,2645,25289
+Desktop Application,"C#, Electron.js","Weak data binding security, Improper use of remote module",Data Exposure,Encrypt sensitive data and use proper access control.,Low,1530,4985
+Web Application,"PHP, HTML, Javascript","Hardcoded credentials in source code, Lack of Content Security Policy (CSP), Insecure local storage usage",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,3781,42037
+Web Application,"Javascript, CSS","Missing input sanitization on client side, CSS injection via style attributes",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,3665,58530
+AI/ML Application,Hugging Face,Unvalidated Model contributions,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,9005,215155
+Desktop Application,"C#, JavaFX, SQLite","Command injection, Unrestricted file system access, Storing sensitive data in Plaintext",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,6206,141178
+Desktop Application,Qt,Weak OpenSSL configuration,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,2642,6934
+AI/ML Application,Hugging Face,Insecure model hosting,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Medium,5152,69806
+Cloud Application,"Terraform, Kubernetes","Storing Sensitive Credentials in Terraform State Files, Exposed Kubernetes Dashboard",XSS,Implement content security policy (CSP) and input validation.,Low,2417,17060
+Cloud Application,Google Cloud,Lack of VPC Network Isolation,Data Exposure,Encrypt sensitive data and use proper access control.,Medium,3374,45270
+Web Application,"Javascript, CSS","Missing input sanitization on client side, Overuse of CSS Attribute Selectors",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,5956,57749
+Web Application,"PHP, Javascript, CSS","Use of include and require with untrusted input, Insecure local storage usage, Overuse of CSS Attribute Selectors",API Abuse,Implement rate limiting and secure API keys.,Low,1095,16198
+Cloud Application,"AWS Lambda, Kubernetes, Google Cloud","Unprotected environment variables, Weak Pod Security Policies, Lack of VPC Network Isolation",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,9116,218169
+Mobile Application,Swift,Lack of obfuscation in Dart code,Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1382,21986
+Mobile Application,"Swift, React Native","Lack of obfuscation in Dart code, Insecure async storage usage",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,5673,77342
+Cloud Application,Terraform,Hardcoded Secrets in Terraform Code,Code Injection,Avoid using eval() and sanitize user inputs.,Medium,5898,52368
+Mobile Application,"Kotlin, Swift","Insecure data storage, Exposed Dart Code in APK/IPA",Code Injection,Avoid using eval() and sanitize user inputs.,Low,1668,9384
+Cloud Application,"MongoDB, AWS Lambda","Insecure Query Handling, Unrestricted API Gateway Access",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Low,2316,16725
+Desktop Application,"Electron.js, C#, JavaFX","Exposed Node.js APIs, Lack of code obfuscation, Weak cryptography implementation",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1238,19487
+Cloud Application,Terraform,Storing Sensitive Credentials in Terraform State Files,XSS,Implement content security policy (CSP) and input validation.,Medium,5945,56490
+Web Application,"HTML, Javascript, MySQL","Hidden Input Fields Manipulation, Insecure DOM manipulation, Storing plaintext passwords",XSS,Implement content security policy (CSP) and input validation.,Low,643,19564
+Desktop Application,"Electron.js, SQLite, C#","Insecure web preference configurations, Lack of input sanitization, Weak data binding security",XSS,Implement content security policy (CSP) and input validation.,Medium,4351,68517
+Mobile Application,"Kotlin, Swift","Insecure custom serialization/deserialization, Unvalidated User input in Flutter forms",Privilege Escalation,Apply the principle of least privilege and audit logs.,High,7102,140104
+Desktop Application,"C#, Electron.js","Command injection, Weak context isolation",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,7096,143725
+Mobile Application,"Java, Kotlin, Swift","WebView Misconfigurations, Improper use of Jetpack security library, Unvalidated User input in Flutter forms",Code Injection,Avoid using eval() and sanitize user inputs.,Low,503,11677
+Desktop Application,"SQLite, Qt","Weak user authentication in embedded DBs, Insecure signal-slot communication",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,1196,11771
+Web Application,"PHP, HTML","Hardcoded credentials in source code, Unvalidated Input Fields",Data Exposure,Encrypt sensitive data and use proper access control.,High,7728,150959
+AI/ML Application,"TensorFlow, PyTorch","Overly permissive model permissions, Exposed Jupyter notebooks running with high privileges",Data Exposure,Encrypt sensitive data and use proper access control.,Critical,8241,212964
+Desktop Application,Electron.js,Improper use of remote module,Data Exposure,Encrypt sensitive data and use proper access control.,Low,870,10975
+Desktop Application,"C#, Qt, JavaFX","Lack of code obfuscation, Insecure signal-slot communication, Hardcoded secrets in source code",API Abuse,Implement rate limiting and secure API keys.,Medium,5596,68352
+AI/ML Application,"Hugging Face, OpenAI API, Scikit-Learn","Weak model deployment security, Lack of output filtering, Insecure data preprocessing pipelines",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,7555,133473
+Cloud Application,"AWS Lambda, MongoDB, Terraform","Insufficient Logging & Monitoring, Exposed MongoDB Instances, Unvalidated Infrastructure Changes",XSS,Implement content security policy (CSP) and input validation.,Critical,8361,219333
+Web Application,"Javascript, PHP, CSS","Exposed API keys in frontend code, Hardcoded credentials in source code, Insecure External Stylesheets",SQL Injection,Use prepared statements and parameterized queries.,High,6255,121360
+Desktop Application,"Qt, Electron.js, JavaFX","Improper handling of user input, Weak context isolation, Unrestricted file system access",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,6303,132148
+Desktop Application,"Electron.js, JavaFX, SQLite","Unrestricted file system access via IPC, Unrestricted file system access, No DB encryption by default",API Abuse,Implement rate limiting and secure API keys.,Low,1027,7953
+AI/ML Application,Scikit-Learn,Lack of Robustness testing,API Abuse,Implement rate limiting and secure API keys.,Medium,5109,56279
+AI/ML Application,"PyTorch, TensorFlow, OpenAI API","Lack of input validation in data pipelines, Exposed Debugging APIs, Weak rate limiting",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1240,12672
+Cloud Application,"Terraform, Kubernetes, MongoDB","Insecure Default Security Group Configurations, Exposed Kubernetes Dashboard, Insecure Query Handling",XSS,Implement content security policy (CSP) and input validation.,High,6934,146883
+Desktop Application,"C#, Electron.js, Qt","Command injection, Weak context isolation, Insecure signal-slot communication",Code Injection,Avoid using eval() and sanitize user inputs.,Low,2769,14898
+Web Application,"HTML, CSS, PHP","Unvalidated Input Fields, CSS injection via style attributes, Weak session management",Data Exposure,Encrypt sensitive data and use proper access control.,Low,1868,23271
+Web Application,"Javascript, HTML, PHP","Insecure DOM manipulation, Missing Secure Flag, Hardcoded credentials in source code",Code Injection,Avoid using eval() and sanitize user inputs.,Critical,8084,219326
+Desktop Application,"SQLite, JavaFX, Qt","Storing sensitive data in Plaintext, Weak cryptography implementation, Insecure signal-slot communication",API Abuse,Implement rate limiting and secure API keys.,High,7587,132423
+Desktop Application,Electron.js,Insecure web preference configurations,SQL Injection,Use prepared statements and parameterized queries.,Medium,5871,66926
+Mobile Application,"Swift, React Native, Java","Unvalidated User input in Flutter forms, Exposed JavaScript code, Unprotected IPC",Code Injection,Avoid using eval() and sanitize user inputs.,High,7911,139479
+Mobile Application,"Flutter, React Native, Kotlin","Lack of obfuscation in Dart code, Insecure async storage usage, Lack of proper background task handling",Privilege Escalation,Apply the principle of least privilege and audit logs.,High,7138,141543
+AI/ML Application,PyTorch,Lack of proper model integrity checks,Code Injection,Avoid using eval() and sanitize user inputs.,Low,1158,6959
+Desktop Application,Qt,Insecure signal-slot communication,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,2357,8369
+AI/ML Application,"PyTorch, Hugging Face, Scikit-Learn","Exposed Jupyter notebooks running with high privileges, Unvalidated Model contributions, Insecure data preprocessing pipelines",API Abuse,Implement rate limiting and secure API keys.,Critical,9959,229703
+AI/ML Application,"Hugging Face, Scikit-Learn, PyTorch","Insecure model hosting, Lack of model explainability, Lack of proper model integrity checks",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,3543,41386
+Cloud Application,"MongoDB, AWS Lambda, Google Cloud","Insecure Query Handling, Overly Permissive IAM Roles, Unsecured Cloud Functions",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,7265,150036
+Cloud Application,"AWS Lambda, Kubernetes","Unprotected environment variables, Exposed Kubernetes Dashboard",XSS,Implement content security policy (CSP) and input validation.,Critical,8576,216868
+Cloud Application,Kubernetes,Weak Pod Security Policies,SQL Injection,Use prepared statements and parameterized queries.,Critical,8190,208152
+AI/ML Application,Hugging Face,API key leaks in Public repositories,Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,2224,13544
+Web Application,"CSS, PHP, Javascript","Insecure External Stylesheets, Hardcoded credentials in source code, Use of EVAL() function",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,5335,60404
+Web Application,"CSS, PHP","CSS injection via style attributes, Poor Input validation",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,5193,59360
+Cloud Application,"Kubernetes, AWS Lambda","Weak Pod Security Policies, Unrestricted API Gateway Access",Data Exposure,Encrypt sensitive data and use proper access control.,Critical,8220,208151
+Desktop Application,Electron.js,Improper use of remote module,Data Exposure,Encrypt sensitive data and use proper access control.,Low,1499,16504
+Mobile Application,React Native,Use of untrusted third-party native modules,Code Injection,Avoid using eval() and sanitize user inputs.,High,7765,140524
+AI/ML Application,"Hugging Face, PyTorch","Weak model deployment security, Weak file system access control",Data Exposure,Encrypt sensitive data and use proper access control.,Critical,9707,240862
+AI/ML Application,OpenAI API,API Misconfiguration,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,9195,219373
+Cloud Application,"Google Cloud, AWS Lambda, MongoDB","Weak Identity & Access Management (IAM) Policies, Overly Permissive IAM Roles, Lack of Encryption for Data at Rest",Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,9047,232109
+Mobile Application,"React Native, Kotlin","Weak SSL pinning implementation, Insecure data storage",SQL Injection,Use prepared statements and parameterized queries.,Low,2348,23509
+Desktop Application,Qt,Improper handling of user input,API Abuse,Implement rate limiting and secure API keys.,Critical,9332,223945
+Cloud Application,"Kubernetes, MongoDB, Google Cloud","Exposed Kubernetes Dashboard, Weak Default Authentication, Misconfigured Cloud Storage Buckets",SQL Injection,Use prepared statements and parameterized queries.,Low,2104,13552
+AI/ML Application,Scikit-Learn,Weak model generalization,Privilege Escalation,Apply the principle of least privilege and audit logs.,High,7844,141937
+Mobile Application,"React Native, Kotlin","Insecure async storage usage, Insecure custom serialization/deserialization",Code Injection,Avoid using eval() and sanitize user inputs.,Low,2216,23561
+Cloud Application,Kubernetes,Running Pods as Root,Data Exposure,Encrypt sensitive data and use proper access control.,Medium,5159,73193
+Cloud Application,Terraform,Lack of IAM Role Restrictions,API Abuse,Implement rate limiting and secure API keys.,Critical,8881,228035
+AI/ML Application,"TensorFlow, Scikit-Learn","Exposed Debugging APIs, Lack of Robustness testing",SQL Injection,Use prepared statements and parameterized queries.,Medium,4087,62829
+AI/ML Application,"OpenAI API, Scikit-Learn","Lack of output filtering, No protection against data poisoning attacks",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,1158,3645
+Desktop Application,Electron.js,Unrestricted file system access via IPC,Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,3188,38224
+AI/ML Application,"PyTorch, TensorFlow, Hugging Face","Exposed Jupyter notebooks running with high privileges, Lack of Input Sanitization, API key leaks in Public repositories",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,1250,4262
+Desktop Application,"C#, Qt, JavaFX","Lack of code obfuscation, Insecure signal-slot communication, Weak cryptography implementation",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,6703,126824
+Web Application,"HTML, Javascript","Insecure Form Actions, Insecure local storage usage",SQL Injection,Use prepared statements and parameterized queries.,Medium,4827,61900
+Desktop Application,"Qt, Electron.js, JavaFX","Weak OpenSSL configuration, Improper use of remote module, Weak cryptography implementation",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,9428,240292
+Desktop Application,"C#, Qt","Command injection, Weak OpenSSL configuration",Data Exposure,Encrypt sensitive data and use proper access control.,High,6092,124453
+Mobile Application,"Kotlin, Java, Flutter","Lack of proper background task handling, Hardcoded API keys and credentials, Lack of obfuscation in Dart code",SQL Injection,Use prepared statements and parameterized queries.,Low,1880,17723
+Desktop Application,"Qt, JavaFX, C#","Insecure signal-slot communication, Hardcoded secrets in source code, Insecure Assembly loading",Code Injection,Avoid using eval() and sanitize user inputs.,Low,2939,16234
+Mobile Application,"Kotlin, React Native","Lack of proper background task handling, Insecure async storage usage",XSS,Implement content security policy (CSP) and input validation.,Low,613,15632
+Web Application,"MySQL, CSS","No rate limiting on database queries, Insecure External Stylesheets",Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,9459,238916
+AI/ML Application,"Hugging Face, OpenAI API","Weak model deployment security, API Misconfiguration",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Critical,9051,231433
+Mobile Application,"Flutter, Kotlin","Debugging code left in production builds, Improper use of Jetpack security library",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,6342,114998
+Mobile Application,"React Native, Swift, Flutter","Use of untrusted third-party native modules, Unvalidated User input in Flutter forms, Exposed Dart code in APK/IPA",XSS,Implement content security policy (CSP) and input validation.,High,7729,139042
+Desktop Application,"Qt, C#, JavaFX","Insecure signal-slot communication, Insecure Assembly loading, Insecure reflection usage",XSS,Implement content security policy (CSP) and input validation.,Medium,3827,49729
+Mobile Application,"Flutter, Java","Unvalidated user input in Flutter forms, WebView Misconfigurations",Code Injection,Avoid using eval() and sanitize user inputs.,Low,625,8606
+Cloud Application,"Google Cloud, MongoDB","Misconfigured Cloud Storage Buckets, Exposed MongoDB Instances",XSS,Implement content security policy (CSP) and input validation.,Critical,9876,240400
+Mobile Application,"Swift, Flutter, Java","Exposed Dart Code in APK/IPA, Unvalidated user input in Flutter forms, Insecure broadcast receivers",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,3561,46556
+Desktop Application,"Qt, C#, SQLite","Insecure signal-slot communication, Command injection, Storing sensitive data in Plaintext",XSS,Implement content security policy (CSP) and input validation.,Critical,9247,223776
+AI/ML Application,PyTorch,Insecure model loading,API Abuse,Implement rate limiting and secure API keys.,Critical,8445,210103
+Cloud Application,"MongoDB, AWS Lambda, Google Cloud","Weak Default Authentication, Insufficient Logging & Monitoring, Lack of VPC Network Isolation",Code Injection,Avoid using eval() and sanitize user inputs.,Low,2960,25808
+Mobile Application,Kotlin,Insecure custom serialization/deserialization,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,9138,225791
+AI/ML Application,PyTorch,Insecure model loading,SQL Injection,Use prepared statements and parameterized queries.,High,6164,125027
+Mobile Application,"React Native, Kotlin, Swift","Use of untrusted third-party native modules, Lack of proper background task handling, Lack of obfuscation in Dart code",API Abuse,Implement rate limiting and secure API keys.,High,7966,149674
+Cloud Application,"Terraform, Kubernetes","Lack of IAM Role Restrictions, Weak Pod Security Policies",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Low,846,20949
+Desktop Application,"Electron.js, Qt","Unrestricted file system access via IPC, Improper handling of user input",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1727,6978
+Web Application,CSS,Insecure External Stylesheets,Code Injection,Avoid using eval() and sanitize user inputs.,High,6080,135149
+Web Application,PHP,Weak session management,Code Injection,Avoid using eval() and sanitize user inputs.,Low,2841,18555
+Cloud Application,Terraform,Lack of IAM Role Restrictions,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,2731,21767
+Cloud Application,Kubernetes,Weak Pod Security Policies,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,5637,66604
+Mobile Application,"Java, Flutter","Weak SSL / TLS Certificate validation, Unvalidated user input in Flutter forms",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,1028,19091
+AI/ML Application,"PyTorch, Scikit-Learn","Lack of proper model integrity checks, Lack of model explainability",Code Injection,Avoid using eval() and sanitize user inputs.,Medium,3862,59099
+Cloud Application,"Google Cloud, AWS Lambda","Weak Identity & Access Management (IAM) Policies, Unprotected environment variables",Data Exposure,Encrypt sensitive data and use proper access control.,High,7875,136560
+Mobile Application,"Swift, React Native, Flutter","Exposed Dart Code in APK/IPA, Lack of proper code obfuscation, Debugging code left in production builds",SQL Injection,Use prepared statements and parameterized queries.,High,7237,137843
+Mobile Application,Flutter,Lack of obfuscation in Dart code,Data Exposure,Encrypt sensitive data and use proper access control.,Medium,4236,61851
+Web Application,"PHP, HTML, CSS","Weak session management, Insecure Form Actions, Weak CSS based UI restrictions",API Abuse,Implement rate limiting and secure API keys.,Low,1447,16830
+Desktop Application,"JavaFX, SQLite","Weak cryptography implementation, Insecure File-based DB access",SQL Injection,Use prepared statements and parameterized queries.,Medium,5510,70227
+Web Application,HTML,Missing Secure Flag,SQL Injection,Use prepared statements and parameterized queries.,Low,2880,7309
+Mobile Application,React Native,Lack of proper code obfuscation,API Abuse,Implement rate limiting and secure API keys.,High,7092,144015
+Desktop Application,"Qt, C#","Improper handling of user input, Command injection",SQL Injection,Use prepared statements and parameterized queries.,Low,2157,14569
+Mobile Application,"Kotlin, Java","Missing network security configuration, Weak SSL / TLS Certificate validation",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Low,1495,5381
+Mobile Application,Kotlin,Lack of proper background task handling,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,6035,117219
+Web Application,"CSS, PHP","Clickjacking via Transparent CSS layers, Weak session management",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1669,17203
+Desktop Application,"JavaFX, Qt, C#","Weak cryptography implementation, Weak OpenSSL configuration, Weak data binding security",XSS,Implement content security policy (CSP) and input validation.,High,7416,138412
+AI/ML Application,OpenAI API,Weak rate limiting,XSS,Implement content security policy (CSP) and input validation.,Low,2271,22870
+Cloud Application,Terraform,Storing Sensitive Credentials in Terraform State Files,API Abuse,Implement rate limiting and secure API keys.,Medium,5358,57758
+Cloud Application,"Kubernetes, MongoDB, AWS Lambda","Weak Pod Security Policies, Insecure Query Handling, Insufficient Logging & Monitoring",SQL Injection,Use prepared statements and parameterized queries.,Low,2733,20494
+Mobile Application,Swift,Debugging code left in production builds,XSS,Implement content security policy (CSP) and input validation.,Low,2893,7856
+AI/ML Application,"TensorFlow, Scikit-Learn, OpenAI API","Overly permissive model permissions, Insecure data preprocessing pipelines, API Misconfiguration",SQL Injection,Use prepared statements and parameterized queries.,Critical,8364,215283
+AI/ML Application,"Hugging Face, TensorFlow, OpenAI API","Lack of model input sanitization, Insecure Model Serialization, API Misconfiguration",Data Exposure,Encrypt sensitive data and use proper access control.,High,7547,130728
+Mobile Application,"React Native, Flutter","Use of untrusted third-party native modules, Unvalidated user input in Flutter forms",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Critical,8824,225246
+Cloud Application,"Kubernetes, AWS Lambda, Google Cloud","Unrestricted API Server Access, Insufficient Logging & Monitoring, Lack of VPC Network Isolation",API Abuse,Implement rate limiting and secure API keys.,Medium,3230,37709
+Mobile Application,"Java, Flutter, Swift","WebView Misconfigurations, Exposed Dart code in APK/IPA, Unvalidated User input in Flutter forms",Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,9868,231902
+Mobile Application,Kotlin,Lack of proper background task handling,API Abuse,Implement rate limiting and secure API keys.,Medium,3291,39239
+AI/ML Application,"TensorFlow, OpenAI API, Hugging Face","Exposed Debugging APIs, Lack of output filtering, API key leaks in Public repositories",XSS,Implement content security policy (CSP) and input validation.,Medium,4169,66692
+Web Application,HTML,Lack of Content Security Policy (CSP),Privilege Escalation,Apply the principle of least privilege and audit logs.,High,7203,134713
+Cloud Application,MongoDB,Exposed MongoDB Instances,API Abuse,Implement rate limiting and secure API keys.,High,6597,131171
+AI/ML Application,"Scikit-Learn, Hugging Face","Lack of model explainability, Unvalidated Model contributions",API Abuse,Implement rate limiting and secure API keys.,Medium,3327,60001
+Web Application,"HTML, PHP","Lack of Content Security Policy (CSP), Use of include and require with untrusted input",API Abuse,Implement rate limiting and secure API keys.,High,7774,152925
+Mobile Application,React Native,Exposed JavaScript code,API Abuse,Implement rate limiting and secure API keys.,Critical,8072,202413
+Web Application,"PHP, HTML, MySQL","Weak session management, Insecure Form Actions, Lack of prepared statements",Data Exposure,Encrypt sensitive data and use proper access control.,Critical,9453,225198
+Desktop Application,"JavaFX, Electron.js","Hardcoded secrets in source code, Exposed Node.js APIs",XSS,Implement content security policy (CSP) and input validation.,Medium,3917,60636
+Mobile Application,"Java, Swift","Insecure broadcast receivers, Unvalidated User input in Flutter forms",SQL Injection,Use prepared statements and parameterized queries.,Low,932,7760
+Mobile Application,Flutter,Debugging code left in production builds,API Abuse,Implement rate limiting and secure API keys.,Low,2384,9385
+Web Application,"PHP, CSS, HTML","Poor Input validation, Insecure External Stylesheets, Unvalidated Input Fields",API Abuse,Implement rate limiting and secure API keys.,Low,1111,15067
+Desktop Application,"C#, JavaFX, Electron.js","Weak data binding security, Unrestricted file system access, Improper use of remote module",Code Injection,Avoid using eval() and sanitize user inputs.,Critical,8676,222079
+Desktop Application,"JavaFX, C#","Hardcoded secrets in source code, Weak data binding security",Data Exposure,Encrypt sensitive data and use proper access control.,Critical,8327,211500
+Web Application,MySQL,Storing plaintext passwords,SQL Injection,Use prepared statements and parameterized queries.,Low,2390,22824
+Web Application,"CSS, PHP, MySQL","Insecure External Stylesheets, Hardcoded credentials in source code, Storing plaintext passwords",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,1500,12087
+Cloud Application,Terraform,Hardcoded Secrets in Terraform Code,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,6958,134636
+Web Application,HTML,Missing HTTPOnly Flag,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,6235,141741
+Web Application,Javascript,Missing input sanitization on client side,Data Exposure,Encrypt sensitive data and use proper access control.,Low,2594,6605
+Cloud Application,"Google Cloud, Terraform","Weak Identity & Access Management (IAM) Policies, Insecure Default Security Group Configurations",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,6398,126816
+Desktop Application,"SQLite, JavaFX, Qt","Lack of input sanitization, Hardcoded secrets in source code, Improper handling of user input",Code Injection,Avoid using eval() and sanitize user inputs.,Medium,4995,73062
+Desktop Application,"C#, SQLite","Insecure Assembly loading, Insecure File-based DB access",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1258,5444
+Desktop Application,"JavaFX, C#, Electron.js","Insecure reflection usage, Weak data binding security, Insecure web preference configurations",SQL Injection,Use prepared statements and parameterized queries.,Critical,9536,230078
+Cloud Application,"Google Cloud, AWS Lambda","Misconfigured Cloud Storage Buckets, Unprotected environment variables",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,7637,130383
+AI/ML Application,OpenAI API,Lack of output filtering,SQL Injection,Use prepared statements and parameterized queries.,Low,650,11699
+Mobile Application,Kotlin,Insecure custom serialization/deserialization,SQL Injection,Use prepared statements and parameterized queries.,Low,903,13707
+Mobile Application,Flutter,Lack of obfuscation in Dart code,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,6133,117651
+Desktop Application,"Electron.js, SQLite","Improper use of remote module, Lack of input sanitization",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,1312,13754
+Web Application,"MySQL, PHP, HTML","Over-privileged database users, Insecure file uploads, Missing Secure Flag",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,3858,50306
+Cloud Application,"Google Cloud, Kubernetes, Terraform","Unsecured Cloud Functions, Exposed Kubernetes Dashboard, Unvalidated Infrastructure Changes",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Medium,4301,51283
+Mobile Application,"Java, Swift, React Native","Weak SSL / TLS Certificate validation, Unvalidated User input in Flutter forms, Lack of proper code obfuscation",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Critical,8267,216970
+Web Application,"MySQL, HTML, Javascript","Storing plaintext passwords, Insecure Form Actions, Insecure local storage usage",SQL Injection,Use prepared statements and parameterized queries.,Critical,8428,218580
+Web Application,"CSS, PHP, Javascript","CSS injection via style attributes, Use of include and require with untrusted input, Missing input sanitization on client side",XSS,Implement content security policy (CSP) and input validation.,Critical,9833,229148
+Cloud Application,AWS Lambda,Overly Permissive IAM Roles,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,7834,150631
+Desktop Application,SQLite,Lack of input sanitization,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,6933,141490
+Mobile Application,React Native,Lack of proper code obfuscation,Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,3020,56612
+AI/ML Application,"OpenAI API, Scikit-Learn, TensorFlow","Insecure prompt injection, Lack of Robustness testing, Overly permissive model permissions",XSS,Implement content security policy (CSP) and input validation.,High,6644,126701
+Mobile Application,"React Native, Swift, Flutter","Use of untrusted third-party native modules, Debugging code left in production builds, Debugging code left in production builds",Data Exposure,Encrypt sensitive data and use proper access control.,Medium,3213,39926
+AI/ML Application,TensorFlow,Exposed Debugging APIs,Code Injection,Avoid using eval() and sanitize user inputs.,Critical,8796,223319
+Web Application,PHP,Hardcoded credentials in source code,API Abuse,Implement rate limiting and secure API keys.,High,7715,139888
+AI/ML Application,PyTorch,Lack of input validation in data pipelines,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,2710,13001
+AI/ML Application,"PyTorch, TensorFlow","Weak file system access control, Insecure Model Serialization",Privilege Escalation,Apply the principle of least privilege and audit logs.,Medium,3936,42480
+Mobile Application,"Swift, React Native","Unvalidated User input in Flutter forms, Lack of proper code obfuscation",API Abuse,Implement rate limiting and secure API keys.,Medium,3079,48737
+Web Application,"MySQL, Javascript","Lack of prepared statements, Exposed API keys in frontend code",Privilege Escalation,Apply the principle of least privilege and audit logs.,High,7520,133036
+Desktop Application,C#,Command injection,Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,9962,241412
+Mobile Application,"Flutter, Java","Exposed Dart code in APK/IPA, WebView Misconfigurations",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Low,1902,21336
+Web Application,"CSS, Javascript, PHP","Overuse of CSS Attribute Selectors, Exposed API keys in frontend code, Poor Input validation",Code Injection,Avoid using eval() and sanitize user inputs.,Low,1348,15789
+Cloud Application,"AWS Lambda, Kubernetes","Insufficient Logging & Monitoring, Weak Pod Security Policies",Data Exposure,Encrypt sensitive data and use proper access control.,Low,685,20835
+Desktop Application,JavaFX,Unrestricted file system access,Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,2066,10646
+AI/ML Application,"OpenAI API, Scikit-Learn, TensorFlow","Lack of output filtering, Insecure data preprocessing pipelines, Lack of Input Sanitization",Privilege Escalation,Apply the principle of least privilege and audit logs.,High,6639,133740
+AI/ML Application,"Scikit-Learn, PyTorch","Insecure data preprocessing pipelines, Insecure model loading",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,2912,9053
+AI/ML Application,Hugging Face,Insecure model hosting,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,6987,136196
+Cloud Application,Kubernetes,Weak Pod Security Policies,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,High,6719,121719
+Mobile Application,"Swift, Java, Kotlin","Unvalidated User input in Flutter forms, Unprotected IPC, Insecure data storage",XSS,Implement content security policy (CSP) and input validation.,High,6318,126912
+Web Application,"Javascript, HTML","Exposed API keys in frontend code, Missing HTTPOnly Flag",Privilege Escalation,Apply the principle of least privilege and audit logs.,High,6877,138431
+Desktop Application,Electron.js,Weak context isolation,Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1987,11109
+Desktop Application,SQLite,Insecure File-based DB access,Code Injection,Avoid using eval() and sanitize user inputs.,Critical,9155,230691
+AI/ML Application,"PyTorch, OpenAI API","Insecure model loading, API Misconfiguration",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,6096,136587
+AI/ML Application,"Hugging Face, OpenAI API, Scikit-Learn","Lack of model input sanitization, API Misconfiguration, No protection against data poisoning attacks",XSS,Implement content security policy (CSP) and input validation.,Medium,5626,50419
+Cloud Application,"Kubernetes, Google Cloud","Running Pods as Root, Unsecured Cloud Functions",API Abuse,Implement rate limiting and secure API keys.,Critical,8348,224960
+Web Application,"HTML, Javascript, MySQL","Hidden Input Fields Manipulation, Use of EVAL() function, No rate limiting on database queries",API Abuse,Implement rate limiting and secure API keys.,Low,2602,24509
+Cloud Application,"MongoDB, Terraform, Kubernetes","Exposed MongoDB Instances, Lack of IAM Role Restrictions, Weak Pod Security Policies",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1376,6200
+Cloud Application,"Terraform, AWS Lambda, Google Cloud","Insecure Default Security Group Configurations, Unrestricted API Gateway Access, Misconfigured Cloud Storage Buckets",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,998,10331
+Mobile Application,Kotlin,Insecure custom serialization/deserialization,SQL Injection,Use prepared statements and parameterized queries.,High,6699,145271
+Web Application,"CSS, MySQL","Clickjacking via Transparent CSS layers, Over-privileged database users",API Abuse,Implement rate limiting and secure API keys.,Medium,3184,60621
+Cloud Application,"Kubernetes, AWS Lambda","Weak Pod Security Policies, Unrestricted API Gateway Access",SQL Injection,Use prepared statements and parameterized queries.,High,7252,151581
+Desktop Application,"Qt, SQLite, C#","Insecure signal-slot communication, Insecure File-based DB access, Command injection",SQL Injection,Use prepared statements and parameterized queries.,Low,1153,7364
+Mobile Application,"Java, Flutter","WebView Misconfigurations, Exposed Dart code in APK/IPA",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,6152,136743
+Desktop Application,Qt,Weak OpenSSL configuration,Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1603,20359
+AI/ML Application,"PyTorch, OpenAI API, Scikit-Learn","Insecure model loading, Weak rate limiting, No protection against data poisoning attacks",XSS,Implement content security policy (CSP) and input validation.,High,6630,125816
+Web Application,"Javascript, MySQL","Missing input sanitization on client side, Over-privileged database users",Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Low,2943,17293
+Web Application,HTML,Lack of Content Security Policy (CSP),API Abuse,Implement rate limiting and secure API keys.,High,7001,145506
+Cloud Application,"MongoDB, Terraform, Google Cloud","No Role-Based Access Control (RBAC) Implemented, Storing Sensitive Credentials in Terraform State Files, Insufficient API Key Security",SQL Injection,Use prepared statements and parameterized queries.,High,6158,118453
+Cloud Application,"AWS Lambda, Google Cloud, Kubernetes","Insufficient Logging & Monitoring, Unsecured Cloud Functions, Insecure RBAC Configurations",XSS,Implement content security policy (CSP) and input validation.,Low,2769,6711
+Desktop Application,SQLite,Storing sensitive data in Plaintext,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Critical,8295,212406
+Mobile Application,"Flutter, Swift","Insecure platform channel communication, Unvalidated User input in Flutter forms",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Medium,4590,48338
+Cloud Application,"Terraform, MongoDB, AWS Lambda","Storing Sensitive Credentials in Terraform State Files, Insecure Query Handling, Unrestricted API Gateway Access",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,High,7361,145577
+AI/ML Application,"TensorFlow, Scikit-Learn","Insecure Model Serialization, Lack of Robustness testing",Code Injection,Avoid using eval() and sanitize user inputs.,Critical,9169,230300
+Cloud Application,"Terraform, Google Cloud, Kubernetes","Storing Sensitive Credentials in Terraform State Files, Weak Identity & Access Management (IAM) Policies, Unrestricted API Server Access",Session Hijacking,Use secure cookies with HTTPOnly and Secure flags.,Low,1197,7774
+AI/ML Application,Scikit-Learn,Lack of Robustness testing,Model Poisoning,Validate and monitor model inputs for adversarial attacks.,Medium,3116,62542
+Cloud Application,"AWS Lambda, Kubernetes, Terraform","Unprotected environment variables, Insecure RBAC Configurations, Lack of IAM Role Restrictions",Code Injection,Avoid using eval() and sanitize user inputs.,Low,2241,24253
+Desktop Application,JavaFX,Insecure reflection usage,Code Injection,Avoid using eval() and sanitize user inputs.,Low,1802,23096
+Desktop Application,"JavaFX, SQLite, C#","Unrestricted file system access, No DB encryption by default, Command injection",SQL Injection,Use prepared statements and parameterized queries.,Critical,8069,202476
+Mobile Application,Swift,Lack of obfuscation in Dart code,XSS,Implement content security policy (CSP) and input validation.,Critical,8427,207674
+Cloud Application,"Terraform, Kubernetes","Insecure Default Security Group Configurations, Exposed Kubernetes Dashboard",SQL Injection,Use prepared statements and parameterized queries.,Low,2430,6390
+Mobile Application,"Swift, Kotlin, Flutter","Insecure platform channel communication, Missing network security configuration, Exposed Dart code in APK/IPA",Privilege Escalation,Apply the principle of least privilege and audit logs.,Low,1395,9950
+Desktop Application,"SQLite, C#, JavaFX","Insecure File-based DB access, Weak data binding security, Hardcoded secrets in source code",Code Injection,Avoid using eval() and sanitize user inputs.,Low,2835,23736
+AI/ML Application,"OpenAI API, Scikit-Learn","API Misconfiguration, No protection against data poisoning attacks",Privilege Escalation,Apply the principle of least privilege and audit logs.,Critical,8487,220601
+Cloud Application,"Google Cloud, MongoDB, Terraform","Weak Identity & Access Management (IAM) Policies, Insecure Query Handling, Lack of IAM Role Restrictions",API Abuse,Implement rate limiting and secure API keys.,Low,1762,23129
+Desktop Application,"C#, SQLite, Electron.js","Insecure Assembly loading, Insecure File-based DB access, Weak context isolation",SQL Injection,Use prepared statements and parameterized queries.,Critical,8120,211713
+Mobile Application,"Java, React Native, Flutter","Hardcoded API keys and credentials, Exposed JavaScript code, Insecure platform channel communication",Code Injection,Avoid using eval() and sanitize user inputs.,High,7876,138869
+Cloud Application,"Kubernetes, Terraform","Unrestricted API Server Access, Hardcoded Secrets in Terraform Code",Privilege Escalation,Apply the principle of least privilege and audit logs.,High,6276,137398
+Mobile Application,Kotlin,Improper use of Jetpack security library,Data Exposure,Encrypt sensitive data and use proper access control.,Low,643,2991
+Mobile Application,"Kotlin, Java, Flutter","Insecure custom serialization/deserialization, WebView Misconfigurations, Unvalidated user input in Flutter forms",API Abuse,Implement rate limiting and secure API keys.,High,6265,141677
+Cloud Application,"Google Cloud, Terraform","Insufficient API Key Security, Hardcoded Secrets in Terraform Code",Data Exposure,Encrypt sensitive data and use proper access control.,Medium,3895,67683
+Cloud Application,"MongoDB, Terraform","Insecure Query Handling, Storing Sensitive Credentials in Terraform State Files",API Abuse,Implement rate limiting and secure API keys.,High,6575,140143
+Cloud Application,Google Cloud,Lack of VPC Network Isolation,XSS,Implement content security policy (CSP) and input validation.,High,7034,139197
